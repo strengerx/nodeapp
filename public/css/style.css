@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: beige;
+}
+
+h1 {
+    font-family: monospace;
+    text-align: center;
+    color: rebeccapurple;
+    font-size: 12vw;
+    font-weight: bold;
+}
+
+img {
+    width: 300px;
+}
