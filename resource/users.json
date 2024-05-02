@@ -1,0 +1,14 @@
+[
+    {
+        "id": "cc2ab625-cd6f-4e2e-a25e-c14774c9179e",
+        "name": "rahul roy",
+        "password": "$2b$10$t0h./.nvrTAPkyZzXNlI8eo6xGlL8JZwnSUA5MeOa5wD6I/yNZUFi",
+        "email": "rahul@gmail.com"
+    },
+    {
+        "id": "5e028235-b3b9-49ed-8807-7978b44efe18",
+        "name": "salman khan",
+        "password": "$2b$10$6or2WIUsIUWFz1zLLQKKUODuv3nuLIuQo7Q2wkcqYlQ23zOUAcDcm",
+        "email": "salman@gmail.com"
+    }
+]
