@@ -3,6 +3,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const { v4: uuid } = require("uuid");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser")
 require("dotenv").config();
 
 
@@ -89,10 +90,25 @@ const login = async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "60s" }
     )
-    console.log(process.env.ACCESS_TOKEN_SECRET);
+
+    const refressToken = jwt.sign(
+        { id: user.id, userName: user.name },
+        process.env.REFERSS_TOKEN_SECRET,
+        { expiresIn: "3600s" }
+    )
+
+    res.cookie("refreshToken", refressToken, {
+        httpOnly: true,
+        maxAge: 60 * 60 * 1000
+    })
+
     return res
         .status(200)
         .json({ accessToken });
 };
+
+const genarateAccessTokenFromRefressToken = (req, res) => {
+    console.log(object);
+}
 
 module.exports = { register, login };
